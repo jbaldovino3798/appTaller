@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DesignApp</string>
+    <string name="button">Sign into Spring</string>
+    <string name="btnFacebook">Continue with Facebook</string>
+    <string name="learn_more">Learn More</string>
+    <string name="imgBanner">Banner</string>
+    <string name="imgbtn1">Imagen1</string>
+    <string name="imgbtn3">Imagen3</string>
+    <string name="imgbtn2">Imagen2</string>
+    <string name="txtCreditCard">Add Credit Card</string>
+    <string name="img1">Camara</string>
+    <string name="txtAddress">Billing Address</string>
+    <string name="cvc">CVC</string>
+    <string name="enter_card_number">Enter Card Number</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="full_name">Full Name</string>
+    <string name="street_address">Street Address</string>
+    <string name="apt_unit">Apt/Unit</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="save_card">Save Card</string>
+    <string name="title_activity_content">ContentActivity</string>
+    <string name="tab_text_1">My Style</string>
+    <string name="tab_text_2">Inspiration</string>
+    <string name="tab_text_3">Search</string>
+    <string name="tab_text_4">Me</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+</resources>
