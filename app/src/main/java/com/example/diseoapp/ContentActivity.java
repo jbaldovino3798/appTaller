@@ -2,6 +2,7 @@ package com.example.diseoapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,6 +16,10 @@ public class ContentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
+
+        Toolbar toolbar;
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     public void launchFormActivity(View view) {
@@ -45,5 +50,15 @@ public class ContentActivity extends AppCompatActivity {
     public void toastActivewear(View view) {
         Toast.makeText(getApplicationContext(), "Se ha añadido el producto Activewear al carrito.",
                 Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickNotification(View view) {
+        Toast.makeText(getApplicationContext(), "Ha clickeado el icono de Notificationes.",
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickCarrito(View view) {
+        Intent intent = new Intent(this, FormActivity.class);
+        startActivity(intent);
     }
 }
