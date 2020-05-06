@@ -7,6 +7,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,20 +18,10 @@ public class ContentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
-
-        Toolbar toolbar;
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-    }
-
-    public void launchFormActivity(View view) {
-        Intent intent = new Intent(this, FormActivity.class);
-        startActivity(intent);
     }
 
     public void toastLearn(View view) {
-        Toast.makeText(getApplicationContext(), "Ha clickeado Learn More.",
-                Toast.LENGTH_SHORT).show();
+        displayToast("Ha clickeado Learn More.");
     }
 
     public void alertSweatshirts(View view) {
@@ -40,25 +32,53 @@ public class ContentActivity extends AppCompatActivity {
                 DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // User clicked OK button.
-                        Toast.makeText(getApplicationContext(), "Se ha añadido el producto Sweatshirts al carrito.",
-                                Toast.LENGTH_SHORT).show();
+                        displayToast("Se ha añadido el producto Sweatshirts al carrito.");
                     }
                 });
         myAlertBuilder.show();
     }
 
     public void toastActivewear(View view) {
-        Toast.makeText(getApplicationContext(), "Se ha añadido el producto Activewear al carrito.",
-                Toast.LENGTH_SHORT).show();
+        displayToast("Se ha añadido el producto Activewear al carrito.");
     }
 
-    public void onClickNotification(View view) {
-        Toast.makeText(getApplicationContext(), "Ha clickeado el icono de Notificationes.",
-                Toast.LENGTH_SHORT).show();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
-    public void onClickCarrito(View view) {
-        Intent intent = new Intent(this, FormActivity.class);
-        startActivity(intent);
+    public void displayToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_notificacion:
+                AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(ContentActivity.this);
+                myAlertBuilder.setTitle("Alert");
+                myAlertBuilder.setMessage("Presione OK para ver las notifiaciones o Cancelar para seguir viendo los productos:");
+                myAlertBuilder.setPositiveButton("OK", new
+                        DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // User clicked OK button.
+                                displayToast("Se mostrara la pantalla de notificaciones.");
+                            }
+                        });
+                myAlertBuilder.show();
+                return true;
+            case R.id.action_carrito:
+                Intent intent = new Intent(this, FormActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                displayToast("Not found");
+                return true;
+        }
+    }
+
+    public void onClickHat(View view) {
+        displayToast("Se ha añadido el producto Hat al carrito.");
     }
 }

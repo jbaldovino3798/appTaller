@@ -15,6 +15,9 @@ public class FormActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+
+        // Ocultar el actionBar
+        getSupportActionBar().hide();
     }
 
     public void onClickShowAlert(View view) {

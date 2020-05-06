@@ -30,7 +30,7 @@
         android:layout_marginEnd="32dp"
         android:contentDescription="@string/btnFacebook"
         android:scaleType="centerCrop"
-        android:onClick="launchContentActivity"
+        android:onClick="onClickFacebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

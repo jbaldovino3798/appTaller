@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DesignApp</string>
+    <string name="app_name">Recommended for You</string>
     <string name="button">Sign into Spring</string>
     <string name="btnFacebook">Continue with Facebook</string>
     <string name="learn_more">Learn More</string>
@@ -21,11 +21,9 @@
     <string name="zip_code">ZIP Code</string>
     <string name="save_card">Save Card</string>
     <string name="title_activity_content">ContentActivity</string>
-    <string name="tab_text_1">My Style</string>
-    <string name="tab_text_2">Inspiration</string>
-    <string name="tab_text_3">Search</string>
-    <string name="tab_text_4">Me</string>
     <string name="recommended_for_you">Recommended for you</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
+    <string name="notificacion" />
+    <string name="carrito" />
 </resources>
